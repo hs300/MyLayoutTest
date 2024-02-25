@@ -1,0 +1,16 @@
+PODS:
+  - MyLayout (1.9.10)
+
+DEPENDENCIES:
+  - MyLayout
+
+SPEC REPOS:
+  trunk:
+    - MyLayout
+
+SPEC CHECKSUMS:
+  MyLayout: 39ee012bd780936c973bdc5d8ce0f84e3de489d7
+
+PODFILE CHECKSUM: bd72fc46230ce9708d9ffbf1e116b504bd42d6b6
+
+COCOAPODS: 1.12.1
