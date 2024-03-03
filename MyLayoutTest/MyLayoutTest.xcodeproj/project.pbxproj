@@ -14,7 +14,9 @@
 		89CED84B2B8AE05D006FB9CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CED8492B8AE05D006FB9CE /* LaunchScreen.storyboard */; };
 		89CED84E2B8AE05D006FB9CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CED84D2B8AE05D006FB9CE /* main.m */; };
 		C38CB7DB98A35679A7CF18B5 /* Pods_MyLayoutTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60ABEA767FAD3091C34C3414 /* Pods_MyLayoutTest.framework */; };
-		CEADACAA2B9449EB00C34569 /* TestLinerLayou7.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADACA92B9449EB00C34569 /* TestLinerLayou7.m */; };
+		CEADACAA2B9449EB00C34569 /* TestLinearLayout7.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADACA92B9449EB00C34569 /* TestLinearLayout7.m */; };
+		CEADACAD2B94B0BB00C34569 /* TestLinearLayout6.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADACAC2B94B0BB00C34569 /* TestLinearLayout6.m */; };
+		CEADACB02B94B2E400C34569 /* TestLinearLayout3.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADACAF2B94B2E400C34569 /* TestLinearLayout3.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +34,12 @@
 		89CED84D2B8AE05D006FB9CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89CED8542B8AE1D1006FB9CE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8B19937BEBF2733C6C289817 /* Pods-MyLayoutTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLayoutTest.debug.xcconfig"; path = "Target Support Files/Pods-MyLayoutTest/Pods-MyLayoutTest.debug.xcconfig"; sourceTree = "<group>"; };
-		CEADACA82B9449EB00C34569 /* TestLinerLayou7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLinerLayou7.h; sourceTree = "<group>"; };
-		CEADACA92B9449EB00C34569 /* TestLinerLayou7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLinerLayou7.m; sourceTree = "<group>"; };
+		CEADACA82B9449EB00C34569 /* TestLinearLayout7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLinearLayout7.h; sourceTree = "<group>"; };
+		CEADACA92B9449EB00C34569 /* TestLinearLayout7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLinearLayout7.m; sourceTree = "<group>"; };
+		CEADACAB2B94B0BB00C34569 /* TestLinearLayout6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLinearLayout6.h; sourceTree = "<group>"; };
+		CEADACAC2B94B0BB00C34569 /* TestLinearLayout6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLinearLayout6.m; sourceTree = "<group>"; };
+		CEADACAE2B94B2E400C34569 /* TestLinearLayout3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLinearLayout3.h; sourceTree = "<group>"; };
+		CEADACAF2B94B2E400C34569 /* TestLinearLayout3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLinearLayout3.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +97,12 @@
 				89CED83C2B8AE05C006FB9CE /* AppDelegate.m */,
 				89CED8412B8AE05C006FB9CE /* ViewController.h */,
 				89CED8422B8AE05C006FB9CE /* ViewController.m */,
-				CEADACA82B9449EB00C34569 /* TestLinerLayou7.h */,
-				CEADACA92B9449EB00C34569 /* TestLinerLayou7.m */,
+				CEADACA82B9449EB00C34569 /* TestLinearLayout7.h */,
+				CEADACA92B9449EB00C34569 /* TestLinearLayout7.m */,
+				CEADACAB2B94B0BB00C34569 /* TestLinearLayout6.h */,
+				CEADACAC2B94B0BB00C34569 /* TestLinearLayout6.m */,
+				CEADACAE2B94B2E400C34569 /* TestLinearLayout3.h */,
+				CEADACAF2B94B2E400C34569 /* TestLinearLayout3.m */,
 				89CED8442B8AE05C006FB9CE /* Main.storyboard */,
 				89CED8472B8AE05D006FB9CE /* Assets.xcassets */,
 				89CED8492B8AE05D006FB9CE /* LaunchScreen.storyboard */,
@@ -216,10 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEADACB02B94B2E400C34569 /* TestLinearLayout3.m in Sources */,
 				89CED8432B8AE05C006FB9CE /* ViewController.m in Sources */,
 				89CED83D2B8AE05C006FB9CE /* AppDelegate.m in Sources */,
 				89CED84E2B8AE05D006FB9CE /* main.m in Sources */,
-				CEADACAA2B9449EB00C34569 /* TestLinerLayou7.m in Sources */,
+				CEADACAA2B9449EB00C34569 /* TestLinearLayout7.m in Sources */,
+				CEADACAD2B94B0BB00C34569 /* TestLinearLayout6.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

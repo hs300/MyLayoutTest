@@ -1,5 +1,5 @@
 //
-//  TestLinerLayou7.h
+//  TestLinearLayout6.h
 //  MyLayoutTest
 //
 //  Created by xiaolong on 2024/3/3.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TestLinerLayou7 : UIViewController
+@interface TestLinearLayout6 : UIViewController
 
 @end
 

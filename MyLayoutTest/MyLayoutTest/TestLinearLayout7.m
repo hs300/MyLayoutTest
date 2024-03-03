@@ -5,13 +5,13 @@
 //  Created by xiaolong on 2024/3/3.
 //
 
-#import "TestLinerLayou7.h"
+#import "TestLinearLayout7.h"
 
-@interface TestLinerLayou7 ()
+@interface TestLinearLayout7 ()
 @property(nonatomic, strong)MyLinearLayout * testLayout;
 @end
 
-@implementation TestLinerLayou7
+@implementation TestLinearLayout7
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +29,6 @@
     MyLinearLayout *action1Layout = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Horz];
     action1Layout.heightSize.equalTo(@(MyLayoutSize.wrap));
     action1Layout.backgroundColor = [UIColor greenColor];
-    action1Layout.topPos.equalTo(self.topLayoutGuide);
     [action1Layout addSubview:[self createActionButton:@"均分视图和间距不居中距不居中距不居中" tag:100]];
    
     [action1Layout addSubview:[self createActionButton:@"均分视图和间距居中" tag:200 ] ];
@@ -110,7 +109,7 @@
     button.titleLabel.numberOfLines = 3;
     button.titleLabel.adjustsFontSizeToFitWidth = YES;
     button.titleLabel.textAlignment = NSTextAlignmentCenter;
-    button.titleLabel.font = [UIFont systemFontOfSize:36];
+    button.titleLabel.font = [UIFont systemFontOfSize:16];
     button.heightSize.equalTo(@(MyLayoutSize.wrap)).add(20);
     button.layer.borderColor = [UIColor redColor].CGColor;
     button.layer.borderWidth = 0.5;
