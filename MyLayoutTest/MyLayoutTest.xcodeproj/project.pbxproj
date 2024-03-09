@@ -17,6 +17,9 @@
 		CEADACAA2B9449EB00C34569 /* TestLinearLayout7.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADACA92B9449EB00C34569 /* TestLinearLayout7.m */; };
 		CEADACAD2B94B0BB00C34569 /* TestLinearLayout6.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADACAC2B94B0BB00C34569 /* TestLinearLayout6.m */; };
 		CEADACB02B94B2E400C34569 /* TestLinearLayout3.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADACAF2B94B2E400C34569 /* TestLinearLayout3.m */; };
+		CEADACB32B9C45CB00C34569 /* TestLinearLayout2.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADACB22B9C45CB00C34569 /* TestLinearLayout2.m */; };
+		CEADACB62B9C6C9D00C34569 /* LLTest2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADACB52B9C6C9D00C34569 /* LLTest2ViewController.m */; };
+		CEADACB92B9C6D4600C34569 /* CFTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADACB82B9C6D4600C34569 /* CFTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,12 @@
 		CEADACAC2B94B0BB00C34569 /* TestLinearLayout6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLinearLayout6.m; sourceTree = "<group>"; };
 		CEADACAE2B94B2E400C34569 /* TestLinearLayout3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLinearLayout3.h; sourceTree = "<group>"; };
 		CEADACAF2B94B2E400C34569 /* TestLinearLayout3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLinearLayout3.m; sourceTree = "<group>"; };
+		CEADACB12B9C45CB00C34569 /* TestLinearLayout2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLinearLayout2.h; sourceTree = "<group>"; };
+		CEADACB22B9C45CB00C34569 /* TestLinearLayout2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLinearLayout2.m; sourceTree = "<group>"; };
+		CEADACB42B9C6C9D00C34569 /* LLTest2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLTest2ViewController.h; sourceTree = "<group>"; };
+		CEADACB52B9C6C9D00C34569 /* LLTest2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLTest2ViewController.m; sourceTree = "<group>"; };
+		CEADACB72B9C6D4600C34569 /* CFTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFTool.h; sourceTree = "<group>"; };
+		CEADACB82B9C6D4600C34569 /* CFTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +112,17 @@
 				CEADACAC2B94B0BB00C34569 /* TestLinearLayout6.m */,
 				CEADACAE2B94B2E400C34569 /* TestLinearLayout3.h */,
 				CEADACAF2B94B2E400C34569 /* TestLinearLayout3.m */,
+				CEADACB12B9C45CB00C34569 /* TestLinearLayout2.h */,
+				CEADACB22B9C45CB00C34569 /* TestLinearLayout2.m */,
+				CEADACB42B9C6C9D00C34569 /* LLTest2ViewController.h */,
+				CEADACB52B9C6C9D00C34569 /* LLTest2ViewController.m */,
 				89CED8442B8AE05C006FB9CE /* Main.storyboard */,
 				89CED8472B8AE05D006FB9CE /* Assets.xcassets */,
 				89CED8492B8AE05D006FB9CE /* LaunchScreen.storyboard */,
 				89CED84C2B8AE05D006FB9CE /* Info.plist */,
 				89CED84D2B8AE05D006FB9CE /* main.m */,
+				CEADACB72B9C6D4600C34569 /* CFTool.h */,
+				CEADACB82B9C6D4600C34569 /* CFTool.m */,
 			);
 			path = MyLayoutTest;
 			sourceTree = "<group>";
@@ -229,9 +244,12 @@
 				CEADACB02B94B2E400C34569 /* TestLinearLayout3.m in Sources */,
 				89CED8432B8AE05C006FB9CE /* ViewController.m in Sources */,
 				89CED83D2B8AE05C006FB9CE /* AppDelegate.m in Sources */,
+				CEADACB62B9C6C9D00C34569 /* LLTest2ViewController.m in Sources */,
 				89CED84E2B8AE05D006FB9CE /* main.m in Sources */,
 				CEADACAA2B9449EB00C34569 /* TestLinearLayout7.m in Sources */,
 				CEADACAD2B94B0BB00C34569 /* TestLinearLayout6.m in Sources */,
+				CEADACB32B9C45CB00C34569 /* TestLinearLayout2.m in Sources */,
+				CEADACB92B9C6D4600C34569 /* CFTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

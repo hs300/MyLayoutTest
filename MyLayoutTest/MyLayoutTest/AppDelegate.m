@@ -9,6 +9,8 @@
 #import "TestLinearLayout3.h"
 #import "TestLinearLayout6.h"
 #import "TestLinearLayout7.h"
+#import "TestLinearLayout2.h"
+#import "LLTest2ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,7 +21,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //TestLinerLayou7 *controller = [[TestLinerLayou7 alloc] init];
-    TestLinearLayout3 *controller = [TestLinearLayout3 new];
+    //TestLinearLayout3 *controller = [TestLinearLayout3 new];
+    TestLinearLayout2 *controller = [TestLinearLayout2 new];
+    //LLTest2ViewController *controller = [LLTest2ViewController new];
     _window.rootViewController = controller;
     [_window makeKeyAndVisible];
     
