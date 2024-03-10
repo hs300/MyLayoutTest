@@ -21,7 +21,7 @@
 
 @implementation LLTest2ViewController
 
--(void)loadView
+-(void)viewDidLoad
 {
     /*
      本例子用来实现将一个布局视图嵌入到一个UIScrollView里面的功能。
@@ -105,10 +105,10 @@
 }
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    // Do any additional setup after loading the view.
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

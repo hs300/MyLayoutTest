@@ -11,6 +11,7 @@
 #import "TestLinearLayout7.h"
 #import "TestLinearLayout2.h"
 #import "LLTest2ViewController.h"
+#import <GoogleSignIn/GoogleSignIn.h>
 @interface AppDelegate ()
 
 @end
@@ -30,6 +31,16 @@
     return YES;
 }
 
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    BOOL handled;
+    handled = [GIDSignIn.sharedInstance handleURL:url];
+    if(handled){
+        return YES;
+    }
+    
+    return NO;
+}
 
 
 

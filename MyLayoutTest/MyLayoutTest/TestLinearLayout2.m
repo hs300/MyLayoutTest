@@ -6,7 +6,7 @@
 //
 
 #import "TestLinearLayout2.h"
-
+#import <GoogleSignIn/GoogleSignIn.h>
 @interface TestLinearLayout2 ()
 
 @property(nonatomic, strong)MyLinearLayout *contentLayout;
@@ -15,7 +15,9 @@
 
 @implementation TestLinearLayout2
 
-- (void)loadView {
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
     UIScrollView *scrollView = [UIScrollView new];
     scrollView.backgroundColor = [UIColor whiteColor];
     self.view = scrollView;
@@ -28,14 +30,14 @@
     contentView.heightSize.lBound(scrollView.heightSize, 10, 1);
     contentView.backgroundColor = [UIColor greenColor];
     [scrollView addSubview:contentView];
-    [self createSection1:contentView];
-   
-    [self createSection2:contentView];
-    
-    [self createSection3:contentView];
-    
-    [self createSection4:contentView];
-    
+//    [self createSection1:contentView];
+//
+//    [self createSection2:contentView];
+//
+//    [self createSection3:contentView];
+//
+//    [self createSection4:contentView];
+//
     [self createSection5:contentView];
 }
 
@@ -51,18 +53,30 @@
     layout.myTop = 25;
     [contentView addSubview:layout];
     
-//    UILabel *label = [UILabel new];
-//    label.text = @"性别：";
-//    label.font = [UIFont systemFontOfSize:15];
-//    [label sizeToFit];
-//    [layout addSubview:label];
+    UILabel *label = [UILabel new];
+    label.text = @"性别：";
+    label.font = [UIFont systemFontOfSize:15];
+    [label sizeToFit];
+    [layout addSubview:label];
+    
     
     UISwitch *sexSwitch = [UISwitch new];
     
     [layout addSubview:sexSwitch];
-    sexSwitch.myLeading = 0.5;
+    sexSwitch.myLeft = 0.5;
+    
+    [sexSwitch addTarget:self action:@selector(valueChange) forControlEvents:UIControlEventValueChanged];
 }
 
+- (void)valueChange{
+    [GIDSignIn.sharedInstance signInWithPresentingViewController:self completion:^(GIDSignInResult * _Nullable signInResult, NSError * _Nullable error) {
+            if(error){
+                return;
+            }
+            
+            NSLog(@"sign in google");
+    }];
+}
 
 - (void)createSection4:(MyLinearLayout *)contentView{
     MyLinearLayout *layout = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Horz];
