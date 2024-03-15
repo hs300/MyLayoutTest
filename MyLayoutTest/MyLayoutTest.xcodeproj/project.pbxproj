@@ -395,7 +395,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T87B52BDP9;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = JZW2VNK835;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyLayoutTest/Info.plist;
@@ -410,10 +410,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.boom.maze.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = test.wanz.game;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = boweProfile;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "test.wanz.game dev 231205";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -429,7 +429,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = T87B52BDP9;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = JZW2VNK835;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyLayoutTest/Info.plist;
@@ -444,10 +444,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.boom.maze.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = test.wanz.game;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = boweProfile;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "test.wanz.game dev 231205";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

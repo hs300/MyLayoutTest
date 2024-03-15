@@ -12,6 +12,7 @@
 #import "TestLinearLayout2.h"
 #import "LLTest2ViewController.h"
 #import <GoogleSignIn/GoogleSignIn.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //TestLinerLayou7 *controller = [[TestLinerLayou7 alloc] init];
     //TestLinearLayout3 *controller = [TestLinearLayout3 new];
@@ -27,6 +30,9 @@
     //LLTest2ViewController *controller = [LLTest2ViewController new];
     _window.rootViewController = controller;
     [_window makeKeyAndVisible];
+    
+  
+    
     
     return YES;
 }
@@ -39,10 +45,11 @@
         return YES;
     }
     
+    handled = [FBSDKApplicationDelegate.sharedInstance application:app openURL:url sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey] annotation:options[UIApplicationLaunchOptionsAnnotationKey]];
+    if(handled){
+        return YES;
+    }
     return NO;
 }
-
-
-
 
 @end

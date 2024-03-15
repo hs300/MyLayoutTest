@@ -7,10 +7,12 @@
 
 #import "TestLinearLayout2.h"
 #import <GoogleSignIn/GoogleSignIn.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 @interface TestLinearLayout2 ()
-
+@property (strong, nonatomic) UIButton *customLoginButton;
 @property(nonatomic, strong)MyLinearLayout *contentLayout;
-
+@property(nonatomic, strong)MyLinearLayout *showHideView;
 @end
 
 @implementation TestLinearLayout2
@@ -37,10 +39,57 @@
 //    [self createSection3:contentView];
 //
 //    [self createSection4:contentView];
-//
+
     [self createSection5:contentView];
+    
+    [self createSection7:contentView];
+    
+    self.customLoginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.customLoginButton setTitle:@"Login with Facebook" forState:UIControlStateNormal];
+        [self.customLoginButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self.customLoginButton addTarget:self action:@selector(loginWithFacebook) forControlEvents:UIControlEventTouchUpInside];
+        self.customLoginButton.frame = CGRectMake(0, 0, 200, 40);
+        self.customLoginButton.center = self.view.center;
+
+        [contentView addSubview:self.customLoginButton];
 }
 
+- (void)loginWithFacebook {
+    FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
+    [loginManager logInWithPermissions:@[@"public_profile", @"email"]
+                    fromViewController:self
+                               handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+        if (error) {
+            NSLog(@"Facebook login failed with error: %@", error.localizedDescription);
+        } else if (result.isCancelled) {
+            NSLog(@"Facebook login was cancelled.");
+        } else {
+            NSLog(@"Facebook login successful.");
+            // 处理成功登录，例如获取用户数据
+        }
+    }];
+}
+
+
+- (void)createSection7:(MyLinearLayout *)contentView{
+    MyLinearLayout *layout = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Vert];
+    layout.myHorzMargin = 0;
+    layout.myHeight = 80;
+    layout.backgroundColor = [UIColor yellowColor];
+    [contentView addSubview:layout];
+    
+    self.showHideView = layout;
+    
+    UILabel *label = [UILabel new];
+    label.text = @"xxx";
+    label.font = [UIFont systemFontOfSize:16];
+    [label sizeToFit];
+    [layout addSubview:label];
+}
+
+- (void)createSection6:(MyLinearLayout *)contentView{
+    
+}
 
 - (void)createSection5:(MyLinearLayout *)contentView{
     MyLinearLayout *layout = [MyLinearLayout linearLayoutWithOrientation:MyOrientation_Horz];
@@ -53,11 +102,11 @@
     layout.myTop = 25;
     [contentView addSubview:layout];
     
-    UILabel *label = [UILabel new];
-    label.text = @"性别：";
-    label.font = [UIFont systemFontOfSize:15];
-    [label sizeToFit];
-    [layout addSubview:label];
+   
+    UISwitch *sw = [UISwitch new];
+    [layout addSubview:sw];
+    [sw addTarget:self action:@selector(swClicked:) forControlEvents:UIControlEventValueChanged];
+    
     
     
     UISwitch *sexSwitch = [UISwitch new];
@@ -65,10 +114,40 @@
     [layout addSubview:sexSwitch];
     sexSwitch.myLeft = 0.5;
     
-    [sexSwitch addTarget:self action:@selector(valueChange) forControlEvents:UIControlEventValueChanged];
+    [sexSwitch addTarget:self action:@selector(fbLogin) forControlEvents:UIControlEventValueChanged];
 }
 
-- (void)valueChange{
+- (void)swClicked:(UISwitch *)sBtn{
+    if(sBtn.on == YES){
+        self.showHideView.hidden = true;
+    }
+    else{
+        self.showHideView.hidden = false;
+    }
+}
+
+
+- (void)fbLogin{
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+       [login logInWithPermissions:@[@"public_profile",@"email"]
+                fromViewController:self
+                           handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+           if (error) {
+               NSLog(@"--- login fail, err: %@", error);
+               return;
+           }
+           
+           FBSDKAccessToken* accessToken = [FBSDKAccessToken currentAccessToken];
+           if (accessToken) {
+               NSLog(@"--- login success, userId: %@, token: %@", accessToken.userID, accessToken.tokenString);
+               return;
+           }
+           
+           NSLog(@"--- login cancel");
+       }];
+}
+
+- (void)googleLogin{
     [GIDSignIn.sharedInstance signInWithPresentingViewController:self completion:^(GIDSignInResult * _Nullable signInResult, NSError * _Nullable error) {
             if(error){
                 return;
